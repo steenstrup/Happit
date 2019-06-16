@@ -1,0 +1,15 @@
+﻿@page "/"
+
+@using Happit.Client.Services;
+@inject AppState state
+
+<div class="grid-container">
+</div>
+
+@functions {
+    protected override void OnInit()
+    {
+        state.OnChange += StateHasChanged;
+    }
+
+}
